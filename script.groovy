@@ -8,10 +8,10 @@ def buildImage() {
     sh 'pwd'
     sh 'ls'
     withCredentials([usernamePassword(credentialsId: 'dockerhub-id', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-        sh 'docker build -t abdullahhafeez/test-repo:jvm1.0 .'
+        sh 'docker build -t abdullahhafeez/test-repo:jvm1.2 .'
         sh "echo $PASS | docker login -u $USER --password-stdin"
         //sh 'docker push abdullahhafeez/myalpine:2 '
-        sh 'docker push abdullahhafeez/test-repo:jvm1.1 '
+        sh 'docker push abdullahhafeez/test-repo:jvm1.2 '
     }
 } 
 
