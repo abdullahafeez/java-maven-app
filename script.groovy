@@ -11,7 +11,7 @@ def buildImage() {
         sh 'docker build -t abdullahhafeez/test-repo:jvm1.0 .'
         sh "echo $PASS | docker login -u $USER --password-stdin"
         //sh 'docker push abdullahhafeez/myalpine:2 '
-        sh 'docker push abdullahhafeez/test-repo:jvm1.0 '
+        sh 'docker push abdullahhafeez/test-repo:jvm1.1 '
     }
 } 
 
