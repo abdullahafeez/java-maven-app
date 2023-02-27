@@ -10,7 +10,7 @@ def buildImage() {
     withCredentials([usernamePassword(credentialsId: 'dockerhub-id', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
         //sh 'docker build -t abdullahhafeez/test-repo:jma-1.0 .'
         sh "echo $PASS | docker login -u $USER --password-stdin"
-        sh 'docker push abdullahhafeez/myalpine:1 '
+        sh 'docker push abdullahhafeez/myalpine:1.2 '
     }
 } 
 
